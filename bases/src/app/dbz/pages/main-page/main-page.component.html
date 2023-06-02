@@ -1,0 +1,12 @@
+<h1> DBZ Personajes </h1>
+
+<div class="row">
+  <div class="col">
+    <app-listado [personajes] = 'personajes'> </app-listado>
+  </div>
+
+  <div class = "col">
+    <app-formulario (onNuevoPersonaje) = "onNuevoPersonaje($event)"></app-formulario>
+
+  </div>
+</div>

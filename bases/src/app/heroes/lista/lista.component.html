@@ -1,0 +1,31 @@
+<p> Lista de heroes. </p>
+
+<ul class = 'ul-2 list-group'>
+  <li class = 'list-group-items' *ngFor = 'let elemento of listado'>
+    {{ elemento }}
+  </li>
+</ul>
+
+<h3 *ngIf = 'borrado; else nadaBorrado'>
+  {{ borrado }} ha sido borrado.
+</h3>
+
+<ng-template #nadaBorrado>
+  <h3>
+    Nada ha sido borrado.
+  </h3>
+</ng-template>
+
+<input type = "text" name = 'nuevo' id="">
+
+<button type="submit" (click) = 'agregar()' class = 'btn btn-outline-primary'>
+  Ingresar heroe
+</button>
+
+<button (click) = 'quitar()' class = 'btn btn-outline-danger'>
+  Quitar un heroe
+</button>
+
+<button (click) = 'reset()' class = 'btn btn-outline-secondary'>
+  Reset
+</button>

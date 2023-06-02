@@ -1,0 +1,12 @@
+.seccion {
+  display: inline-flex;
+}
+
+.seccion button {
+  margin: 1.5vh 3vw 1.5vh 3vw;
+}
+
+.reset {
+  display: block;
+}
+

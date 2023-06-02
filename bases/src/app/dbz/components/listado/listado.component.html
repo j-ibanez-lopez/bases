@@ -1,0 +1,19 @@
+<h5> Listado </h5>
+    <ul class = 'list-group'>
+      <!-- <li *ngFor = 'let item of characterList; let indice = index; let first = first; let even = even' class = 'list-group-item {{indice === 0 ? "list-group-item-success":"list-group-item-danger"}}'> -->
+      <li *ngFor = 'let item of characterList;
+        let indice = index;
+        let first = first;
+        let par = even;
+        let impar = odd'
+        class = 'list-group-item'
+        [ngClass] = "{'list-group-item-danger': par,
+                      'list-group-item-success': impar}">
+          {{ indice + 1 }} - {{ item.nombre }} tiene {{ item.poder }} puntos de poder.
+          esto -> {{ first }}
+          <!-- Otra forma de usar if's -->
+          <!-- ¿Será {{ indice + 1 }} el último de la lista? {{indice === characterList.length}}
+
+          {{characterList.length}} -->
+      </li>
+    </ul>

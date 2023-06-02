@@ -1,0 +1,55 @@
+<h1> Spiderman </h1>
+
+<dl>
+  <td>
+    Nombre:
+  </td>
+  <dd>
+    {{ nombre }}
+  </dd>
+</dl>
+
+<dl>
+  <td>
+    Edad
+  </td>
+  <dd>
+    {{ edad }}
+  </dd>
+</dl>
+
+<dl>
+  <td>
+    Método
+  </td>
+  <dd>
+    {{ concatenarInformacion()}}
+  </dd>
+</dl>
+
+<dl>
+  <td>
+    Capitalizado:
+  </td>
+  <dd>
+    {{ capitalizar() }}
+  </dd>
+</dl>
+
+
+<input type = "text" name = "" id = "">
+<br>
+<br>
+<button type = 'submit' (click) = 'cambiarNombre()' class = 'btn btn-primary mx-3' *ngIf = 'nombre == "Peter Parker" || nombre == "peter parker"'>
+  Cambiar Nombre
+</button>
+
+<button type="submit" (click) = 'cambiarEdad()' class = 'btn btn-primary mx-3' *ngIf = 'edad == 21'>
+  Cambiar Edad
+</button>
+
+<button type="submit" (click) = 'resetear()' class = 'btn btn-primary mx-3'>
+  Reestablecer
+</button>
+
+

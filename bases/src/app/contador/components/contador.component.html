@@ -1,0 +1,23 @@
+<h1> Wena </h1>
+<hr>
+<p>Bienvenidos a Angular.</p>
+
+<!-- Recordar que HTML puede hacer referencias a variables
+    que están en TS ubicandolas dentro de doble llave -->
+<h4> Este proyecto se llama {{ title }} </h4>
+
+<div class = 'seccion'>
+  <button type = "submit" (click) = 'cambiar_dato("-", 1)'> Disminuir 1 </button>
+
+  <h5> Contador: {{ contador }}</h5>
+
+  <button type = "submit" (click) = 'cambiar_dato("+", 1)'> Aumentar 1 </button>
+</div>
+
+<button type = "submit" (click) = reestablecer() class = 'reset'>
+  Reset
+</button>
+
+<h4 *ngIf = "limite">
+  No se puede disminuir más.
+</h4>
